@@ -1,0 +1,26 @@
+@model List<Course>
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kurs Listesi</title>
+    </head>
+
+    <body>
+        <h1>Kurs Listesi</h1>
+
+        @foreach(var kurs in Model){
+
+        <div id="kurs_@kurs.Id">
+            <h2>Adı: @kurs.Title</h2>
+            <p>Numarası: @kurs.Id</p>
+            <p>Açıklaması: @kurs.Description</p>
+        </div>
+
+        }
+    </body>
+
+    </html>
